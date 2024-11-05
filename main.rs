@@ -5,10 +5,9 @@ enum BidorAsk{
 }
 
 // Create a struct
-Struct Order {
+struct Order {
     size: f64,
     bid_or_ask: BidorAsk
-
 }
 
 // Constructor to add method to it
