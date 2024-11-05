@@ -1,0 +1,10 @@
+[package]
+name = "trading_engine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "trading_engine"
+path = "main.rs"
