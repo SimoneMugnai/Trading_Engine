@@ -1,10 +1,12 @@
 // Trading engine, first thing is the matching engine, so try to match the order in the order book if we place it on an exchage
+#[derive(Debug)]
 enum BidorAsk{
     Bid,
     Ask
 }
 
 // Create a struct
+#[derive(Debug)]
 struct Order {
     size: f64,
     bid_or_ask: BidorAsk
@@ -41,13 +43,24 @@ impl Price{
 
     }
 }
+
+#[derive(Debug)]
 struct Limit{
     price: Price,
     orders:Vec<Order>
 }
 
+impl  Limit {
+    fn new(price: f64) -> Limit{
+        Limit{
+            price:Price::new(price),
+            orders: Vec::new()
+        }
+
+    }
+}
 
 fn main(){
-    let price = Price::new(50.5);
-    println!("{:?}",price);
+    let limit = Limit::new(78.3);
+    println!("{:?}",limit);
 }
